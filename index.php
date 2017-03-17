@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<?php include "menu.php" ?>
+	<?php include "menu.php";
+	include "lipsum.php";
+	include "footer.php"?>
 </body>
 </html>
