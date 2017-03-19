@@ -1,48 +1,6 @@
-/* Geschreven door Auke Scheepstra */
+/* Written by Auke Scheepstra */
 
-/* MENU */
-/* small icon next to buttons */
-
-#menu-container{
-	position: fixed;
-	width: 10em;
-	height: 100%;
-	transform: translate(-10.1em);
-}
-
-#menu-logo{
-	width: 100%;
-	height: auto;
-}
-
-.menu-item{
-	list-style-type: none;
-	height: 5em;
-	width: 100%;
-	text-align: center;
-	line-height:5em; /* equal to item height */
-}
-
-.menu-dropdown{
-	position:relative;
-	display: none;
-	width: 100%;
-	margin-left: -1px;
-	transform: translate(10.1em, -5.05em);
-}
-
-.menu-item:hover .menu-dropdown, .menu-dropdown:hover{
-	display: block;
-	z-index: 1;
-}
-
-.menu-dropdown-item{
-	width: 100%;
-	list-style-type: none;
-	z-index: 1;
-}
-
-/* FOOTER */
+/* Footer */
 
 html{
 	min-height: 100%;
@@ -50,7 +8,6 @@ html{
 }
 
 body{
-	margin-left: 10.1em; /* equal to menu width */
 	margin-bottom: 6em; /* equal to footer height */
 }
 
@@ -67,6 +24,7 @@ body{
 	width: calc(100%/3 - 1.7px);
 	height: 100%;
 	float: left;
+	display: flex;
 }
 
 .footer-item p{
@@ -74,11 +32,48 @@ body{
 	line-height: 1.5em;
 }
 
+.footer-social-media{
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
 .footer-icon{
-	width: calc(100%/5 - 1em);
+	max-width: 5em;
 	height: auto;
 	margin: .5em;
+}
+
+@media all and (orientation:portrait){
+	.footer-icon{
+		max-width: 2em;
+	}
+}
+
+/* Shop */
+
+#shop{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.shop-item > img{
+	width:100%;
+	max-width: 20em;
+	height: auto;
+}
+
+.item-name{
+	float: left;
+}
+
+.item-price{
 	float: right;
+}
+
+#nav-search, #query{
+	width: 100%;
+	padding: 0;
 }
 
 /* Lipsum */
@@ -96,7 +91,7 @@ body{
 /* STYLES */
 /* Wireframe */
 
-#menu-logo, .menu-item, .menu-dropdown-item, .footer-item, #lipsum p{
+#nav-logo, .nav-item, .nav-dropdown-item, .footer-item, .shop-item, #query, #lipsum p{
 	background: #fff;
 	border: 1px solid #000;
 }

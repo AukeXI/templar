@@ -1,15 +1,10 @@
 <?php
-// Geschreven door Auke Scheepstra?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Templar Preview</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<?php include "menu.php";
-	include "lipsum.php";
-	include "footer.php"?>
-</body>
-</html>
+// Written by Auke Scheepstra
+// Basic showcase with menu, footer and dummy text$title = 'Templar Demo';
+$pagetype = 'index';
+include 'header.php';
+include 'nav.php';
+echo '<div id="lipsum">';
+include 'lipsum.php';
+echo '</div>';
+include 'footer.php'?>
